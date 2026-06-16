@@ -1,0 +1,1806 @@
+{
+  "input_data_source": "online_shopping_10_cats.csv",
+  "rows": 62774,
+  "categories": 10,
+  "system_status": "degraded",
+  "llm_active": false,
+  "llm_reason": "API_KEY_MISSING",
+  "data_degraded": false,
+  "all_rows_from_stats": 62774,
+  "negative_rows": 31046,
+  "regex_phone_negative_total": 245,
+  "regex_query_mode": "regex",
+  "invalid_regex_query_mode": "literal_fallback",
+  "scatter_negative_total": 31046,
+  "scatter_negative_sampled": 120,
+  "checks": {
+    "health": {
+      "status": "ok",
+      "message": "服务运行正常",
+      "data_source": "online_shopping_10_cats.csv",
+      "rows": 62774,
+      "categories": 10,
+      "fallback_reason": "特征宽表不适合看板，已回退到 online_shopping_10_cats.csv。",
+      "system_status": "degraded"
+    },
+    "system_status": {
+      "status": "degraded",
+      "llm": {
+        "llm_active": false,
+        "degraded": true,
+        "reason": "API_KEY_MISSING",
+        "configured_key": "",
+        "message": "API_KEY_MISSING: 未检测到 SILICONFLOW_API_KEY / DASHSCOPE_API_KEY / OPENAI_API_KEY，系统降级为内置规则与历史数据看板，不影响基础可视化。"
+      },
+      "data": {
+        "data_degraded": false,
+        "source": "online_shopping_10_cats.csv",
+        "rows": 62774,
+        "categories": 10,
+        "fallback_reason": "特征宽表不适合看板，已回退到 online_shopping_10_cats.csv。",
+        "warnings": [
+          "batch_1000_features.csv 只有单一品类或单一标签，不适合多维看板，继续寻找原始真实数据。"
+        ]
+      },
+      "storage": {
+        "duckdb_dependency_installed": true,
+        "duckdb_path_exists": false,
+        "duckdb_read_only_available": false,
+        "read_only_strategy": "duckdb.connect(database='data/analytics.db', read_only=True)"
+      }
+    },
+    "stats_all": {
+      "filters": {
+        "cat": null,
+        "sentiment": null,
+        "query": null,
+        "ids_count": 0,
+        "query_mode": "none"
+      },
+      "rows": 62774,
+      "category_distribution": {
+        "categories": [
+          "平板",
+          "水果",
+          "洗发水",
+          "衣服",
+          "酒店",
+          "计算机",
+          "书籍",
+          "手机",
+          "蒙牛",
+          "热水器"
+        ],
+        "counts": [
+          10000,
+          10000,
+          10000,
+          10000,
+          10000,
+          3992,
+          3851,
+          2323,
+          2033,
+          575
+        ],
+        "total": 62774
+      },
+      "sentiment_overview": {
+        "sentiments": [
+          "正面",
+          "负面",
+          "中性"
+        ],
+        "data": [
+          {
+            "category": "平板",
+            "total": 10000,
+            "正面": 5000,
+            "负面": 5000,
+            "中性": 0
+          },
+          {
+            "category": "水果",
+            "total": 10000,
+            "正面": 5000,
+            "负面": 5000,
+            "中性": 0
+          },
+          {
+            "category": "洗发水",
+            "total": 10000,
+            "正面": 5000,
+            "负面": 5000,
+            "中性": 0
+          },
+          {
+            "category": "衣服",
+            "total": 10000,
+            "正面": 5000,
+            "负面": 5000,
+            "中性": 0
+          },
+          {
+            "category": "酒店",
+            "total": 10000,
+            "正面": 5000,
+            "负面": 5000,
+            "中性": 0
+          },
+          {
+            "category": "计算机",
+            "total": 3992,
+            "正面": 1996,
+            "负面": 1996,
+            "中性": 0
+          },
+          {
+            "category": "书籍",
+            "total": 3851,
+            "正面": 2100,
+            "负面": 1751,
+            "中性": 0
+          },
+          {
+            "category": "手机",
+            "total": 2323,
+            "正面": 1165,
+            "负面": 1158,
+            "中性": 0
+          },
+          {
+            "category": "蒙牛",
+            "total": 2033,
+            "正面": 992,
+            "负面": 1041,
+            "中性": 0
+          },
+          {
+            "category": "热水器",
+            "total": 575,
+            "正面": 475,
+            "负面": 100,
+            "中性": 0
+          }
+        ]
+      }
+    },
+    "stats_negative": {
+      "filters": {
+        "cat": null,
+        "sentiment": "负面",
+        "query": null,
+        "ids_count": 0,
+        "query_mode": "none"
+      },
+      "rows": 31046,
+      "category_distribution": {
+        "categories": [
+          "平板",
+          "水果",
+          "洗发水",
+          "衣服",
+          "酒店",
+          "计算机",
+          "书籍",
+          "手机",
+          "蒙牛",
+          "热水器"
+        ],
+        "counts": [
+          5000,
+          5000,
+          5000,
+          5000,
+          5000,
+          1996,
+          1751,
+          1158,
+          1041,
+          100
+        ],
+        "total": 31046
+      },
+      "sentiment_overview": {
+        "sentiments": [
+          "正面",
+          "负面",
+          "中性"
+        ],
+        "data": [
+          {
+            "category": "平板",
+            "total": 5000,
+            "正面": 0,
+            "负面": 5000,
+            "中性": 0
+          },
+          {
+            "category": "水果",
+            "total": 5000,
+            "正面": 0,
+            "负面": 5000,
+            "中性": 0
+          },
+          {
+            "category": "洗发水",
+            "total": 5000,
+            "正面": 0,
+            "负面": 5000,
+            "中性": 0
+          },
+          {
+            "category": "衣服",
+            "total": 5000,
+            "正面": 0,
+            "负面": 5000,
+            "中性": 0
+          },
+          {
+            "category": "酒店",
+            "total": 5000,
+            "正面": 0,
+            "负面": 5000,
+            "中性": 0
+          },
+          {
+            "category": "计算机",
+            "total": 1996,
+            "正面": 0,
+            "负面": 1996,
+            "中性": 0
+          },
+          {
+            "category": "书籍",
+            "total": 1751,
+            "正面": 0,
+            "负面": 1751,
+            "中性": 0
+          },
+          {
+            "category": "手机",
+            "total": 1158,
+            "正面": 0,
+            "负面": 1158,
+            "中性": 0
+          },
+          {
+            "category": "蒙牛",
+            "total": 1041,
+            "正面": 0,
+            "负面": 1041,
+            "中性": 0
+          },
+          {
+            "category": "热水器",
+            "total": 100,
+            "正面": 0,
+            "负面": 100,
+            "中性": 0
+          }
+        ]
+      }
+    },
+    "regex_reviews": {
+      "total": 245,
+      "limit": 3,
+      "query_mode": "regex",
+      "data": [
+        {
+          "source_index": 15017,
+          "cat": "手机",
+          "label": 0,
+          "sentiment": "负面",
+          "review": "总是自动关机，输入法太差",
+          "review_length": 12,
+          "summary": "",
+          "category": "手机"
+        },
+        {
+          "source_index": 15021,
+          "cat": "手机",
+          "label": 0,
+          "sentiment": "负面",
+          "review": "一次我正在通话中,说的正热闹,突然短信振铃,差点把自己吓死,以为漏电,大叫一声,还吓旁边人一跳,尴尬死了,各位机友,请大家也注意别再出现这种状况,还有,这机子拍照功能还真是差点,相片感觉很粗糙,传到电脑上感觉稍微好点,跟价格不配哦",
+          "review_length": 115,
+          "summary": "",
+          "category": "手机"
+        },
+        {
+          "source_index": 15026,
+          "cat": "手机",
+          "label": 0,
+          "sentiment": "负面",
+          "review": "一：这个价位上，买个能拍照的手机没问题。二：没有彩信功能，现在很流行彩信，女朋友想发给我它的照片什么的都报怨我的手机烂！三：没有短信群发功能。四：上网速度慢。五：没有手写功能，哪怕有个MP3功能也算值了。",
+          "review_length": 102,
+          "summary": "",
+          "category": "手机"
+        }
+      ]
+    },
+    "invalid_regex_fallback": {
+      "total": 21,
+      "limit": 3,
+      "query_mode": "literal_fallback",
+      "data": [
+        {
+          "source_index": 1388,
+          "cat": "书籍",
+          "label": 1,
+          "sentiment": "正面",
+          "review": "近日连续读了几遍[[中国不高兴]]一书，无论是宋晓军，王小东，还是黄纪苏，宋强，刘仰，他们的文章或直指时弊，或笑骂嘲讽，无一不是说出了有一点爱国心的被所谓的“精英”们鄙夷的的愤青的心声，真有一种痛快淋漓的爽的感觉，希望高层能切实地听听青年的呼声，不要再被那些误国误民的所谓的“精英”所左右，为了中国的利益，挺直腰杆，大声地说出自己想说的话，勇敢地做自己想做的事。",
+          "review_length": 181,
+          "summary": "",
+          "category": "书籍"
+        },
+        {
+          "source_index": 1836,
+          "cat": "书籍",
+          "label": 1,
+          "sentiment": "正面",
+          "review": "冰心的作品老早就喜欢，虽然有许多的诗句都是简单明了，但是其中的诗韵却令人舒坦，有一种到童话中的感觉，书中的故事就像一个原始的大森林，走在其中的是渺小的如迷了路的小松鼠，在找路的同时，看到了无数美丽的事物，眼睛连眨一下都害怕会错过什么，一边小心翼翼地参观这个美丽的世界，一端又用心地绕过地上可爱的小生物，躺在这里，即使是充当一只小的松鼠，也觉得不愿意再回去了。[小朋友，你看你的脚边，一朵小小的黄花，我们大家，绕着它走，别踩着这朵花！]多么可爱 啊，不用想象，都可以看到这样令人发出真心微笑的场面，那小小的黄花，似乎是一下子就跳进心坷儿里，没有防备地当上了主角。句子简单平实，可却令人如此喜欢，冰心带给人的力量，看来不是一点点。淡妆浓抹总相宜......",
+          "review_length": 326,
+          "summary": "",
+          "category": "书籍"
+        },
+        {
+          "source_index": 1997,
+          "cat": "书籍",
+          "label": 1,
+          "sentiment": "正面",
+          "review": "[荐书]很可爱的小册子，随时可以带着翻看下，心情超靓，我把她放在办公室抽屉里，闲暇之时瞄上一眼，感觉很舒服，内容多多，本人超喜欢的，好东西大家分享，喜欢绘画的朋友应该看看哦。",
+          "review_length": 87,
+          "summary": "",
+          "category": "书籍"
+        }
+      ]
+    },
+    "scatter_negative": {
+      "total": 31046,
+      "sampled": 120,
+      "query_mode": "none",
+      "data": [
+        {
+          "source_index": 2100,
+          "cat": "书籍",
+          "sentiment": "负面",
+          "review_length": 148,
+          "value": [
+            148,
+            -0.985,
+            2100
+          ],
+          "review": "做为一本声名在外的流行书，说的还是广州的外企，按道理应该和我的生存环境差不多啊。但是一看之下，才发现相去甚远。这也就算了，还发现其中的很多规则有很强的企业个性，也就说，只是个例，而不是行例。给我们这些老油条看看也就算了，如果给那些对外企向往"
+        },
+        {
+          "source_index": 2359,
+          "cat": "书籍",
+          "sentiment": "负面",
+          "review_length": 434,
+          "value": [
+            434,
+            -0.925,
+            2359
+          ],
+          "review": "于丹《论语》心得(易中天作序强力推荐)首先我觉得易中天并非真想给于丹的这部书作序，从那篇文章中丝毫感觉不出他对这部书有什么赞叹，仅仅是不好推脱才写的吧，毕竟是同一节目起家的。其次是本书的内容表面上是写论语心得，而内容仅仅是拿论语做引子，讲一"
+        },
+        {
+          "source_index": 2618,
+          "cat": "书籍",
+          "sentiment": "负面",
+          "review_length": 42,
+          "value": [
+            42,
+            -1.12,
+            2618
+          ],
+          "review": "我买了《求医不如求己》和《周汝昌校对石头记》发现书的纸张质量和书店里卖的有很大出入。"
+        },
+        {
+          "source_index": 2877,
+          "cat": "书籍",
+          "sentiment": "负面",
+          "review_length": 86,
+          "value": [
+            86,
+            -1.06,
+            2877
+          ],
+          "review": "书的印刷看起来也不好,画面也不漂亮,内容的连惯性也不好,所以让人看起来一点也不能吸引孩子的兴趣和眼球,只是实在不想睡觉看一下,起催眠作用.作为家长来说,我也不爱讲这几本书."
+        },
+        {
+          "source_index": 3136,
+          "cat": "书籍",
+          "sentiment": "负面",
+          "review_length": 895,
+          "value": [
+            895,
+            -1.0,
+            3136
+          ],
+          "review": "买他的书纯属是为了看他写的《民国女子》关于那个临水照花人的内容，很多人说他写的张爱玲很好，于是买了他的书。我一般买书都是从头开始看起的，这次对于《今生今世》也是这样。书的一开始，讲的是他小时在老家的事情，典型的江南水乡，很多情节点点滴滴很细"
+        },
+        {
+          "source_index": 3395,
+          "cat": "书籍",
+          "sentiment": "负面",
+          "review_length": 50,
+          "value": [
+            50,
+            -0.94,
+            3395
+          ],
+          "review": "很肤浅，论述特别像小学生范文，还是那种很模范的议论文，总分总，中间几个例子。有种上当的感觉，不喜欢。"
+        },
+        {
+          "source_index": 3654,
+          "cat": "书籍",
+          "sentiment": "负面",
+          "review_length": 33,
+          "value": [
+            33,
+            -0.88,
+            3654
+          ],
+          "review": "此书120至140之间有大量装订错误，正版书也这样，实在郁闷！！！"
+        },
+        {
+          "source_index": 8913,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 21,
+          "value": [
+            21,
+            -1.045,
+            8913
+          ],
+          "review": "不满意，赠品都没看见，说的挺好的，都是骗人"
+        },
+        {
+          "source_index": 9172,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 23,
+          "value": [
+            23,
+            -0.985,
+            9172
+          ],
+          "review": "写的送皮套，钢化膜，什么都不给邮，把人当傻子！"
+        },
+        {
+          "source_index": 9431,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 13,
+          "value": [
+            13,
+            -0.925,
+            9431
+          ],
+          "review": "一般没有心跳感觉不建议购买"
+        },
+        {
+          "source_index": 9690,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 11,
+          "value": [
+            11,
+            -1.12,
+            9690
+          ],
+          "review": "垃圾一个月不到就坏了，"
+        },
+        {
+          "source_index": 9949,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 81,
+          "value": [
+            81,
+            -1.06,
+            9949
+          ],
+          "review": "客服欺诈，还没下单，咨询还有原装套吗？告诉我有，让我赶紧下单，下单了，告诉我客服看不到送不送原装套，因为不清楚规则，才咨询，为什么一开始不说清楚规则?误导消费呢？"
+        },
+        {
+          "source_index": 10208,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 218,
+          "value": [
+            218,
+            -1.0,
+            10208
+          ],
+          "review": "第二次购买，不过这次很过分，我是刚买的机子，查保修期居然是到2016年12月，也就是说这台机子是2015年12月激活的，可我是16年3月买的，咨询客服说会以发票日期算保修期，那我请问那你们设置查询保修期的功能干什么！？难道是摆设？我问客服是"
+        },
+        {
+          "source_index": 10467,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 47,
+          "value": [
+            47,
+            -0.94,
+            10467
+          ],
+          "review": "已收到，没有想象中的那么好，物流还可以，开始插卡不好用，拿到客服中心给弄好的，不如去店里面买了"
+        },
+        {
+          "source_index": 10726,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 22,
+          "value": [
+            22,
+            -0.88,
+            10726
+          ],
+          "review": "京东就是垃圾，产品垃圾、服务垃圾、诚信垃圾！"
+        },
+        {
+          "source_index": 10985,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 161,
+          "value": [
+            161,
+            -1.075,
+            10985
+          ],
+          "review": "提醒后面的买家，最好买意外碎屏险，手机质量不好，甩下就破了，真的甩了，各种抠字眼。客服推京东，京东推保险，我买了保险可以16天后生效，回来第二天不小心甩了下碰到东西了就破了。总得来讲，买东西要谨慎！给我侄子买的苹果ipad天天被侄子甩来甩去"
+        },
+        {
+          "source_index": 11244,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 58,
+          "value": [
+            58,
+            -1.015,
+            11244
+          ],
+          "review": "手机买来才一个月，就坏了，，什么破玩意，希望大家看到我这条评论，不要买这手机了，以后不在京东买东西了，不再相信京东！"
+        },
+        {
+          "source_index": 11503,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 25,
+          "value": [
+            25,
+            -0.955,
+            11503
+          ],
+          "review": "平板很好用，五星给京东。一星是给快递员，服务质量差"
+        },
+        {
+          "source_index": 11762,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 23,
+          "value": [
+            23,
+            -0.895,
+            11762
+          ],
+          "review": "买了送给爸爸的，还不错挺轻巧的，送货速度超快。"
+        },
+        {
+          "source_index": 12021,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 6,
+          "value": [
+            6,
+            -1.09,
+            12021
+          ],
+          "review": "手机不怎么样"
+        },
+        {
+          "source_index": 12280,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 119,
+          "value": [
+            119,
+            -1.03,
+            12280
+          ],
+          "review": "我想问一下，你们发货前会检查一下手机外观吗？为什么贴过钢化膜小这么多都发货给我，这钢化膜的边很粗糙，很容易伤手，找客服让我申请售后，一块钢化膜找售后算了吧！只想说你们发货之前能不能验一下货，很失望的一次购物体验，快递五星，手机质量用后再说"
+        },
+        {
+          "source_index": 12539,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 20,
+          "value": [
+            20,
+            -0.97,
+            12539
+          ],
+          "review": "电池太垃圾，就放那一天什么都没开，没电了"
+        },
+        {
+          "source_index": 12798,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 33,
+          "value": [
+            33,
+            -0.91,
+            12798
+          ],
+          "review": "机子用起来有些卡，感觉与描述不符，续航能力有些差，反应有时候有延迟"
+        },
+        {
+          "source_index": 13057,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 31,
+          "value": [
+            31,
+            -1.105,
+            13057
+          ],
+          "review": "质量确实不怎么样，不到三个月就坏了，返修还不知道什么时候去了？"
+        },
+        {
+          "source_index": 13316,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 37,
+          "value": [
+            37,
+            -1.045,
+            13316
+          ],
+          "review": "第一天799抢不到，第二天899随便买，第三天799随便买，你属孙猴子的啊"
+        },
+        {
+          "source_index": 13575,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 41,
+          "value": [
+            41,
+            -0.985,
+            13575
+          ],
+          "review": "物流超级慢等了六 天外包装有撕开，不知有没有被掉包。这是一次最后悔的网购了。最差评"
+        },
+        {
+          "source_index": 13834,
+          "cat": "平板",
+          "sentiment": "负面",
+          "review_length": 21,
+          "value": [
+            21,
+            -0.925,
+            13834
+          ],
+          "review": "刚回都有缺陷，用了一段时间声音都没了，无语"
+        },
+        {
+          "source_index": 15258,
+          "cat": "手机",
+          "sentiment": "负面",
+          "review_length": 27,
+          "value": [
+            27,
+            -0.985,
+            15258
+          ],
+          "review": "价格太贵了。功能一般，便宜一点还可能回有多一点的顾客。"
+        },
+        {
+          "source_index": 15517,
+          "cat": "手机",
+          "sentiment": "负面",
+          "review_length": 50,
+          "value": [
+            50,
+            -0.925,
+            15517
+          ],
+          "review": "我买了才一个多月，感觉内存小，摄像头颜色不正，待机时间太短，原装电池充满一天就没电了，就输入法不好用"
+        },
+        {
+          "source_index": 15776,
+          "cat": "手机",
+          "sentiment": "负面",
+          "review_length": 15,
+          "value": [
+            15,
+            -1.12,
+            15776
+          ],
+          "review": "续电时间短,一接来电就自动关机"
+        },
+        {
+          "source_index": 16035,
+          "cat": "手机",
+          "sentiment": "负面",
+          "review_length": 288,
+          "value": [
+            288,
+            -1.06,
+            16035
+          ],
+          "review": "1、不支持动漫屏保。2、拍照太暗，如果光线稍差就拍不出像来了，拍照效果太差。3、铃声太低，不支持特效音（动物叫声、原唱KTV等）。4、自带游戏太少、太弱智，而且不能下载。5、通过数据线与电脑互传时，可能在软件方而有缺陷，导致手机数据不能传输"
+        },
+        {
+          "source_index": 21294,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 18,
+          "value": [
+            18,
+            -0.97,
+            21294
+          ],
+          "review": "物流慢，收到时有两个底部已开始腐烂。"
+        },
+        {
+          "source_index": 21553,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 28,
+          "value": [
+            28,
+            -0.91,
+            21553
+          ],
+          "review": "三个火龙果都是臭的，好意思寄过来?京东是这样做生鲜的吗?"
+        },
+        {
+          "source_index": 21812,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 97,
+          "value": [
+            97,
+            -1.105,
+            21812
+          ],
+          "review": "我花上钱开你京东会员，你就给我送来四个干的不成型的火龙果？你京东冷链要是做不好，就请不要做。我下楼出去买四个，铁定没你这么差的。就这个火龙果，我自己不会再买，也不会推荐我的朋友买！差评！渣！！！"
+        },
+        {
+          "source_index": 22071,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 30,
+          "value": [
+            30,
+            -1.045,
+            22071
+          ],
+          "review": "嗯老板你家苹果真不怎么一个字难吃又酸又烂了几个 真***坑人"
+        },
+        {
+          "source_index": 22330,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 22,
+          "value": [
+            22,
+            -0.985,
+            22330
+          ],
+          "review": "第一次给差评，刚拿上打开第一个就黑心。差评。"
+        },
+        {
+          "source_index": 22589,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 15,
+          "value": [
+            15,
+            -0.925,
+            22589
+          ],
+          "review": "包装不错，口号不太好，很硬不甜"
+        },
+        {
+          "source_index": 22848,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 44,
+          "value": [
+            44,
+            -1.12,
+            22848
+          ],
+          "review": "物流很快俩天就到了，苹果很脆甜颜色没那么亮色，可能是那有打蜡吃起来放心，就是小个了一点。"
+        },
+        {
+          "source_index": 23107,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 39,
+          "value": [
+            39,
+            -1.06,
+            23107
+          ],
+          "review": "一分价钱一分货，便宜了*一箱，但是苹果小了好多，还标个秒抢，这让我不爽。。。。"
+        },
+        {
+          "source_index": 23366,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 45,
+          "value": [
+            45,
+            -1.0,
+            23366
+          ],
+          "review": "拿了第一个削皮的时候里面居然都是坏了的，无语无语啊。。。。外表看不出来，里面民居然是这样的"
+        },
+        {
+          "source_index": 23625,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 45,
+          "value": [
+            45,
+            -0.94,
+            23625
+          ],
+          "review": "第一次买，再也不会有以后了。小的跟我的拳头一样大，有的表面的霉斑都满了。还不如去超市买呢！"
+        },
+        {
+          "source_index": 23884,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 39,
+          "value": [
+            39,
+            -0.88,
+            23884
+          ],
+          "review": "有五个磕伤的，形状奇形怪状，最关键的是有一股类似药水的味道，不知道是不是防腐剂"
+        },
+        {
+          "source_index": 24143,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 28,
+          "value": [
+            28,
+            -1.075,
+            24143
+          ],
+          "review": "火龙果不新鲜，快递员给放在e站，天太热，有的地方出现腐烂"
+        },
+        {
+          "source_index": 24402,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 25,
+          "value": [
+            25,
+            -1.015,
+            24402
+          ],
+          "review": "都不够我一手握的。这幺小的苹果我还第一次见。很不值"
+        },
+        {
+          "source_index": 24661,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 44,
+          "value": [
+            44,
+            -0.955,
+            24661
+          ],
+          "review": "12个果，四个完全坏的，其它3个出现坏点，，京东这个果都可以这样卖，还有什么其它不能卖的"
+        },
+        {
+          "source_index": 24920,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 17,
+          "value": [
+            17,
+            -0.895,
+            24920
+          ],
+          "review": "呵呵既不新鲜也不个大便宜没好货呵呵"
+        },
+        {
+          "source_index": 25179,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 59,
+          "value": [
+            59,
+            -1.09,
+            25179
+          ],
+          "review": "对这个苹果相当无语，买了两箱，送朋友一箱，朋友的那箱12个有10个都是碰伤了，我这箱还好一点，一个虫眼，三个碰伤。。。"
+        },
+        {
+          "source_index": 25438,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 19,
+          "value": [
+            19,
+            -1.03,
+            25438
+          ],
+          "review": "我没有收到货呀，估计，现在都坏了吧！！"
+        },
+        {
+          "source_index": 25697,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 39,
+          "value": [
+            39,
+            -0.97,
+            25697
+          ],
+          "review": "能再小一点吗？我不知道是苹果还是枣！这是潘苹果，和我以前超市买的完全两个标准！"
+        },
+        {
+          "source_index": 25956,
+          "cat": "水果",
+          "sentiment": "负面",
+          "review_length": 40,
+          "value": [
+            40,
+            -0.91,
+            25956
+          ],
+          "review": "水果外形不错，比较小。第试了下，里面芯是黑的，让人怎么吃。第一次买到这么差的东西"
+        },
+        {
+          "source_index": 31215,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 13,
+          "value": [
+            13,
+            -1.075,
+            31215
+          ],
+          "review": "洗过头屑多，不好，感觉很次"
+        },
+        {
+          "source_index": 31474,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 95,
+          "value": [
+            95,
+            -1.015,
+            31474
+          ],
+          "review": "我买的风扇买完618就降价，说什么保价618那都是忽悠人的，申请保价理都每人理，京东就这点诚信吗？一星是给京东的，与商品无关，京东就是一个不讲信誉，虽然说才*钱但是这样子真不爽(* ￣︿￣)"
+        },
+        {
+          "source_index": 31733,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 38,
+          "value": [
+            38,
+            -0.955,
+            31733
+          ],
+          "review": "洗发水用了很油，我的头发本来是中性偏点点干的，结果，尼~玛居然油得必须天天洗"
+        },
+        {
+          "source_index": 31992,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 87,
+          "value": [
+            87,
+            -0.895,
+            31992
+          ],
+          "review": "用了清扬好多年，从来没见过这么差的清扬，洗头时候扎的人睁不开眼睛，扎的眼睛生疼，洗完头了，眼睛红肿，泪流，真是最差的一次购物体验，京东应该关注一下产品的安全性和把握进货质量关"
+        },
+        {
+          "source_index": 32251,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 44,
+          "value": [
+            44,
+            -1.09,
+            32251
+          ],
+          "review": "价格波动太大，头几天买一百多，现在才89，气人，效果暂时还没什么作用，保价也不行，什么嘛"
+        },
+        {
+          "source_index": 32510,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 17,
+          "value": [
+            17,
+            -1.03,
+            32510
+          ],
+          "review": "垃圾，用了头皮屑多的很，垃圾，假货"
+        },
+        {
+          "source_index": 32769,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 13,
+          "value": [
+            13,
+            -0.97,
+            32769
+          ],
+          "review": "包装不好'用过后也不是很好"
+        },
+        {
+          "source_index": 33028,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 74,
+          "value": [
+            74,
+            -0.91,
+            33028
+          ],
+          "review": "买回来就这样，小瓶的有一瓶都漏完了！要求补一瓶小的都不肯，说什么只能申请换货，我等你来收再等你寄回来，最少3，4天，我没那么多时间陪你耍。什么玩意儿"
+        },
+        {
+          "source_index": 33287,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 13,
+          "value": [
+            13,
+            -1.105,
+            33287
+          ],
+          "review": "刚到货商家就掉价，不给处理"
+        },
+        {
+          "source_index": 33546,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 17,
+          "value": [
+            17,
+            -1.045,
+            33546
+          ],
+          "review": "这个洗发水不好，会刺激眼睛。 差评"
+        },
+        {
+          "source_index": 33805,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 11,
+          "value": [
+            11,
+            -0.985,
+            33805
+          ],
+          "review": "东西是假的 洗着没香味"
+        },
+        {
+          "source_index": 34064,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 12,
+          "value": [
+            12,
+            -0.925,
+            34064
+          ],
+          "review": "洗了头痒痒，京东，太失望"
+        },
+        {
+          "source_index": 34323,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 67,
+          "value": [
+            67,
+            -1.12,
+            34323
+          ],
+          "review": "第一次买，冲着资生堂的牌子来的，结果好失望啊，相当不好，洗了感觉头发都油乎乎的，比没洗还糟糕，都不知道是质量问题还是非正品，好郁闷啊！"
+        },
+        {
+          "source_index": 34582,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 19,
+          "value": [
+            19,
+            -1.06,
+            34582
+          ],
+          "review": "跟商场的不一样，感觉这个是打回去重做的"
+        },
+        {
+          "source_index": 34841,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 24,
+          "value": [
+            24,
+            -1.0,
+            34841
+          ],
+          "review": "差评给派送员的，电话都不打一个直接发信息说在大厅"
+        },
+        {
+          "source_index": 35100,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 39,
+          "value": [
+            39,
+            -0.94,
+            35100
+          ],
+          "review": "效果我不知道怎么样、关键是打开包装居然漏了…给我气得啊…差评、盖子居然都没盖紧"
+        },
+        {
+          "source_index": 35359,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 16,
+          "value": [
+            16,
+            -0.88,
+            35359
+          ],
+          "review": "假的！洗了头痒死了，而且容易油！"
+        },
+        {
+          "source_index": 35618,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 106,
+          "value": [
+            106,
+            -1.075,
+            35618
+          ],
+          "review": "我怀疑是假的，仔细看“应该是全球沙宣美发学院”而我买的所有的包括试用装都没有“全球”二字，看宣传的图片全部有“全球”，少即便一个字就有偷梁换柱的可能。而且味道也不正，这是我在京东第一次买到不满意的东西，有些失望。"
+        },
+        {
+          "source_index": 35877,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 87,
+          "value": [
+            87,
+            -1.015,
+            35877
+          ],
+          "review": "不好用，价位比潘婷高，效果却差了十万八千里！洗了吹干头发发干，潘婷吹干还是水润的发质。头屑更出众的vs，隔天就有头屑了，潘婷从未出现过，不会再买该产品，或许是给的（甲）货？！"
+        },
+        {
+          "source_index": 36136,
+          "cat": "洗发水",
+          "sentiment": "负面",
+          "review_length": 31,
+          "value": [
+            31,
+            -0.955,
+            36136
+          ],
+          "review": "非常不满意，晚上洗的头发，第二天头痒痒的不行了，还都是头皮屑。"
+        },
+        {
+          "source_index": 37862,
+          "cat": "蒙牛",
+          "sentiment": "负面",
+          "review_length": 66,
+          "value": [
+            66,
+            -1.075,
+            37862
+          ],
+          "review": "，最近我心神不定，先满足我小小的愿望。来桌满汉全席就好了，睡前给我一杯热牛奶，不喝伊利不喝不要蒙牛，雀巢就行。然后我俩开始吐槽到天亮"
+        },
+        {
+          "source_index": 38121,
+          "cat": "蒙牛",
+          "sentiment": "负面",
+          "review_length": 6,
+          "value": [
+            6,
+            -1.015,
+            38121
+          ],
+          "review": "早就不买蒙牛"
+        },
+        {
+          "source_index": 38380,
+          "cat": "蒙牛",
+          "sentiment": "负面",
+          "review_length": 19,
+          "value": [
+            19,
+            -0.955,
+            38380
+          ],
+          "review": "居然是蒙牛……我是不喝呢，还是不喝呢？"
+        },
+        {
+          "source_index": 38639,
+          "cat": "蒙牛",
+          "sentiment": "负面",
+          "review_length": 56,
+          "value": [
+            56,
+            -0.895,
+            38639
+          ],
+          "review": "继续抵制 换汤不换药有个蛋用…… 一个B子换件衣服就想当圣女，扯蛋吧没用的，只要看到“蒙牛”两个字我就不会买……"
+        },
+        {
+          "source_index": 43898,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 10,
+          "value": [
+            10,
+            -1.06,
+            43898
+          ],
+          "review": "一般般，色差有点大。"
+        },
+        {
+          "source_index": 44157,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 19,
+          "value": [
+            19,
+            -1.0,
+            44157
+          ],
+          "review": "裤子腰很刺。不知道是做工不行。还是假货"
+        },
+        {
+          "source_index": 44416,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 46,
+          "value": [
+            46,
+            -0.94,
+            44416
+          ],
+          "review": "非常非常不好，要的加绒的，给我拿的薄的， 颜色不对还， 特么的， 下回都别买了， 气死我了，"
+        },
+        {
+          "source_index": 44675,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 11,
+          "value": [
+            11,
+            -0.88,
+            44675
+          ],
+          "review": "衣服很脏 而且还有印子"
+        },
+        {
+          "source_index": 44934,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 32,
+          "value": [
+            32,
+            -1.075,
+            44934
+          ],
+          "review": "裤子跟图片不一样，质量太差，服务也不好，想退货，客服都联系不上，"
+        },
+        {
+          "source_index": 45193,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 30,
+          "value": [
+            30,
+            -1.015,
+            45193
+          ],
+          "review": "超垃圾又掉颜色线头也多，都不知道是不是正品。最失败的一次购物"
+        },
+        {
+          "source_index": 45452,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 11,
+          "value": [
+            11,
+            -0.955,
+            45452
+          ],
+          "review": "样式有些旧，牛仔比较硬"
+        },
+        {
+          "source_index": 45711,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 26,
+          "value": [
+            26,
+            -0.895,
+            45711
+          ],
+          "review": "货发错了，还不让拒收，这是什么态度，申通快递太垃圾了"
+        },
+        {
+          "source_index": 45970,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 16,
+          "value": [
+            16,
+            -1.09,
+            45970
+          ],
+          "review": "颜色和图片不太一样，感觉被坑了。"
+        },
+        {
+          "source_index": 46229,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 61,
+          "value": [
+            61,
+            -1.03,
+            46229
+          ],
+          "review": "你妺的 第一次在京东买到这种货 比地摊上差不多 这价钱在地摊上就可以买两条了现在京东也做假货了 差评 以后再也不在京东买了"
+        },
+        {
+          "source_index": 46488,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 76,
+          "value": [
+            76,
+            -0.97,
+            46488
+          ],
+          "review": "1.裤子质量根本就不值这个价格，还有一股胶水味。    2.尺寸大了想换条尺寸小的，然后给我寄过来一条别人穿过的开裆裤。    请尽快接受我的退货申请。"
+        },
+        {
+          "source_index": 46747,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 19,
+          "value": [
+            19,
+            -0.91,
+            46747
+          ],
+          "review": "买的最小号M结果大了两个腰，我也是醉了"
+        },
+        {
+          "source_index": 47006,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 10,
+          "value": [
+            10,
+            -1.105,
+            47006
+          ],
+          "review": "太差了，差死了不能买"
+        },
+        {
+          "source_index": 47265,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 8,
+          "value": [
+            8,
+            -1.045,
+            47265
+          ],
+          "review": "呵呵哒 威胁我呢"
+        },
+        {
+          "source_index": 47524,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 12,
+          "value": [
+            12,
+            -0.985,
+            47524
+          ],
+          "review": "穿了一次就坏了 垃圾裤子"
+        },
+        {
+          "source_index": 47783,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 70,
+          "value": [
+            70,
+            -0.925,
+            47783
+          ],
+          "review": "大家请注意他们的裤型每次都不一样的，本人在第一次买的时候穿着挺好的，没有几天我又买了三件．穿着太瘦根本无法穿．客服说他们随时换版型．不讲信用"
+        },
+        {
+          "source_index": 48042,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 82,
+          "value": [
+            82,
+            -1.12,
+            48042
+          ],
+          "review": "不好、买了两件 一件黑一件军绿色、都是M号结果黑色的大了好多、我申请退货 结果退回来还是那样、京东是忽悠人的、买了他们的东西 如果你想退那是不可能的、最好别再京东买"
+        },
+        {
+          "source_index": 48301,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 41,
+          "value": [
+            41,
+            -1.06,
+            48301
+          ],
+          "review": "退款退了两件就退了一件的钱 催来催去也是这样 纯属浪费时间 半个小时复一次 态度？"
+        },
+        {
+          "source_index": 48560,
+          "cat": "衣服",
+          "sentiment": "负面",
+          "review_length": 26,
+          "value": [
+            26,
+            -1.0,
+            48560
+          ],
+          "review": "差价不补！物流慢得没的说！最垃圾的一次购物！垃圾垃圾"
+        },
+        {
+          "source_index": 50815,
+          "cat": "计算机",
+          "sentiment": "负面",
+          "review_length": 63,
+          "value": [
+            63,
+            -1.09,
+            50815
+          ],
+          "review": "京东的发货员是不是几个月没休息了，为朋友买的东西，收货地址是潍坊诸城，他居然发到我这里，而且写的是：中国海洋大学（诸城市 ）。"
+        },
+        {
+          "source_index": 51074,
+          "cat": "计算机",
+          "sentiment": "负面",
+          "review_length": 67,
+          "value": [
+            67,
+            -1.03,
+            51074
+          ],
+          "review": "有点重，键盘有点鼓起来的感觉，左右键比较硬 屏幕有点刺眼，把亮度调低，又有点暗，看时间长感觉眼睛不舒服 不知道是没有调好，还是其它原因"
+        },
+        {
+          "source_index": 51333,
+          "cat": "计算机",
+          "sentiment": "负面",
+          "review_length": 85,
+          "value": [
+            85,
+            -0.97,
+            51333
+          ],
+          "review": "还是有点热啊 纸箱被拆开过了，小小的郁闷 但是HD的硬盘通电3小时，还好啦 物流太糟糕了，申通服务恶劣啊，自己去取的 系统折腾了我一个上午才搞定，貌似还有几个驱动还没搞定"
+        },
+        {
+          "source_index": 51592,
+          "cat": "计算机",
+          "sentiment": "负面",
+          "review_length": 42,
+          "value": [
+            42,
+            -0.91,
+            51592
+          ],
+          "review": "VISTA系统用起来不熟练； 对比了一下，2G的内存运行VISTA系统还是比较快的。"
+        },
+        {
+          "source_index": 51851,
+          "cat": "计算机",
+          "sentiment": "负面",
+          "review_length": 100,
+          "value": [
+            100,
+            -1.105,
+            51851
+          ],
+          "review": "无预装系统，且主板BIOS没有打入SLIC证书，因此不能激活OEM版VISTA，造成VISTA无法使用。换了几个版本VISTA和激活工具都没有拿下VISTA，我会再试，也请成功安装VISTA的朋友指教"
+        },
+        {
+          "source_index": 52110,
+          "cat": "计算机",
+          "sentiment": "负面",
+          "review_length": 71,
+          "value": [
+            71,
+            -1.045,
+            52110
+          ],
+          "review": "1. 屏幕有2个坏点。..................T_T.................. 2. 笔记本中部温度高，变压器温度很高。"
+        },
+        {
+          "source_index": 52369,
+          "cat": "计算机",
+          "sentiment": "负面",
+          "review_length": 99,
+          "value": [
+            99,
+            -0.985,
+            52369
+          ],
+          "review": "钢琴烤漆容易留指纹，模具风格死板。原装驱动不能把GF9650GT性能全部释放，到NVIDIA官网下载驱动玩游戏不会再卡，但开机后转换输入密码指纹界面时会出现花屏再换成原装驱动目前开了几次还没发现花屏"
+        },
+        {
+          "source_index": 52628,
+          "cat": "计算机",
+          "sentiment": "负面",
+          "review_length": 40,
+          "value": [
+            40,
+            -0.925,
+            52628
+          ],
+          "review": "说明书太简单了点。装机自带的一些软件没有任何说明。希望以后服务能够做得再细致点。"
+        },
+        {
+          "source_index": 57887,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 81,
+          "value": [
+            81,
+            -1.09,
+            57887
+          ],
+          "review": "地段马马乎乎。但这个楼本来就像写字楼一样，大部分都是人家办公的地方，少部分楼层是客房。房间不大，设施也有点旧的样子，早餐更是残不目睹。我真的觉得他能评上3星是奇迹"
+        },
+        {
+          "source_index": 58146,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 7,
+          "value": [
+            7,
+            -1.03,
+            58146
+          ],
+          "review": "前台接待较差。"
+        },
+        {
+          "source_index": 58405,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 63,
+          "value": [
+            63,
+            -0.97,
+            58405
+          ],
+          "review": "个人认为唯一优势就是离机场近。 设施很一般，卫浴很旧，水量水压都很小，洗澡起来很痛苦，连护发素也不提供，早餐几乎没什么可吃的。"
+        },
+        {
+          "source_index": 58664,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 51,
+          "value": [
+            51,
+            -0.91,
+            58664
+          ],
+          "review": "价格比成都的高 酒店设施陈旧 卫生条件不好。附近还没有地铁入口 需要打车 15元才能到地铁入口 不推荐"
+        },
+        {
+          "source_index": 58923,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 41,
+          "value": [
+            41,
+            -1.105,
+            58923
+          ],
+          "review": "房间很差，暖气非常不阻，被子又薄，居然连个电话都没有，还是豪华房。下次千万不要住。"
+        },
+        {
+          "source_index": 59182,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 58,
+          "value": [
+            58,
+            -1.045,
+            59182
+          ],
+          "review": "真是受不了，那么多房间非得给你排个洗衣房旁边，一晚上听着洗衣机的声音，会睡得着啊。简直有病的设计，房间电话也是坏的。"
+        },
+        {
+          "source_index": 59441,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 12,
+          "value": [
+            12,
+            -0.985,
+            59441
+          ],
+          "review": "暖气不热，开着空调还是冷"
+        },
+        {
+          "source_index": 59700,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 86,
+          "value": [
+            86,
+            -0.925,
+            59700
+          ],
+          "review": "房间还不错，床铺比较干净，这是优点。缺点：服务较差，有时候叫服务员服务员居然说你为什么不能自己动手啊，我在国内其他任何酒店从未听过。携程定的房只限二层，来之前没有人通知过。"
+        },
+        {
+          "source_index": 59959,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 185,
+          "value": [
+            185,
+            -1.12,
+            59959
+          ],
+          "review": "刚回成都没有地方住，就只有在等朋友最近的地方定了紫薇。去之前很担心，因为该酒店的评价一直不是很好。到了大堂果然失望，服务人员就像刚从周围打工市场招来的，连衣服都不怎么干净！态度还很冷淡！房间里面最大的缺点就是设计问题。阳台的玻璃门打不开，整"
+        },
+        {
+          "source_index": 60218,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 121,
+          "value": [
+            121,
+            -1.06,
+            60218
+          ],
+          "review": "有没有搞错,我的点评为什么不登出来.你们网站只维护酒店的利益就不管客户的感受吗?我现在还感冒着呢!这是什么世道....补充点评 2008年3月13日 ： 对这家酒店的服务我只有两个形容,太差.服务员的素质:一分.暖气小到我感冒到现在还没有好"
+        },
+        {
+          "source_index": 60477,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 73,
+          "value": [
+            73,
+            -1.0,
+            60477
+          ],
+          "review": "比较老旧，楼里面有地毯发霉味道，房间电视是显像管老电视，不是液晶的，无法开机。无线网上不了网，打电话问让我去大厅试试。空调噪音大。以后不会再来了。"
+        },
+        {
+          "source_index": 60736,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 25,
+          "value": [
+            25,
+            -0.94,
+            60736
+          ],
+          "review": "服务太不好了，晚上房间的蚊子太多了，人性的关怀不好"
+        },
+        {
+          "source_index": 60995,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 454,
+          "value": [
+            454,
+            -0.88,
+            60995
+          ],
+          "review": "我想在此提供本人的入住经历给大家，仅供参考1.提前预订酒店时就曾打电话申明过需要接机，结果当日下机后和老公托着行李前前后后找了一圈也没找到来接我们的师傅。无奈之下只得自己叫上出租车前往，好在距离不算太远，旅游公司的车只花了二十元2.从进饭店"
+        },
+        {
+          "source_index": 61254,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 55,
+          "value": [
+            55,
+            -1.075,
+            61254
+          ],
+          "review": "在小区里比较难找，找了比较久，酒店设计比较新，服务也不错，附件交通一般，总体来讲，性价比还是不错的，可以再入住"
+        },
+        {
+          "source_index": 61513,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 87,
+          "value": [
+            87,
+            -1.015,
+            61513
+          ],
+          "review": "这是一家硬件条件很差服务更差的酒店，入住时发现床品上有血迹，酒店过来一位名叫唐*的英文名Ray tang的客房总监态度傲慢报警处理对警官也无所畏惧，以后再也不会入住这家酒店。"
+        },
+        {
+          "source_index": 61772,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 19,
+          "value": [
+            19,
+            -0.955,
+            61772
+          ],
+          "review": "进去一股霉味，地毯发霉，wife不能用"
+        },
+        {
+          "source_index": 62031,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 15,
+          "value": [
+            15,
+            -0.895,
+            62031
+          ],
+          "review": "酒店早餐可以，卫生不好，比较旧"
+        },
+        {
+          "source_index": 62290,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 140,
+          "value": [
+            140,
+            -1.09,
+            62290
+          ],
+          "review": "本来是订的3个晚上，住了2个晚上实在受不了了，我到贵阳的第一个晚上是住在锦江鲜花酒店，第二天委托携程帮我定3个晚上在瑞金酒店，电视比我11年前结婚的电视还破，服务员素质太差了，连基本的礼貌也没有，好象我上辈子欠她们什么一样；敲了一下门马上就"
+        },
+        {
+          "source_index": 62549,
+          "cat": "酒店",
+          "sentiment": "负面",
+          "review_length": 24,
+          "value": [
+            24,
+            -1.03,
+            62549
+          ],
+          "review": "无法形容，我只能说，我不会再有第二次入住的可能了"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+Attempted command:
+  data_env\Scripts\python.exe -m venv test14\test_env
+  test14\test_env\Scripts\python.exe -m pip install -r test14\requirements.txt
+
+Observed result:
+  venv creation failed because ensurepip returned non-zero status and the new environment had no pip module.
+
+Conclusion:
+  The project dependencies were verified in the existing course environment data_env, but the clean virtual environment rebuild still needs manual verification on a Python installation with working ensurepip/pip.

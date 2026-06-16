@@ -1,0 +1,35 @@
+# Python runtime
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+test_env/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large local data and generated storage
+*.csv
+*.parquet
+*.db
+*.db.tmp
+*.db.wal
+*.sqlite
+*.sqlite3
+data/*.csv
+data/*.parquet
+data/*.db
+data/*.sqlite*
+
+# Logs and temporary outputs
+*.log
+tmp/
+.tmp/

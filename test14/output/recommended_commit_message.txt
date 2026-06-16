@@ -1,0 +1,7 @@
+feat(m4): integrate week14 e2e startup, dependency cleanup and explicit degradation guard
+
+Changes:
+- add run_app.py for dependency checks, port detection, FastAPI subprocess management and browser startup
+- add /api/system-status for API key, data fallback and DuckDB read-only strategy visibility
+- add frontend degradation banner for missing LLM API key or fallback data source
+- add minimal requirements.txt, README.md, .gitignore and validation outputs for engineering delivery

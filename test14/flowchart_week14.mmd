@@ -1,0 +1,14 @@
+flowchart LR
+    A["真实历史评论数据<br/>online_shopping_10_cats.csv"]
+    B["Producer / Worker<br/>流式模拟与特征处理"]
+    C["持久化层<br/>CSV / DuckDB read_only"]
+    D["FastAPI 服务<br/>/api/health<br/>/api/system-status<br/>/api/stats"]
+    E["ECharts 前端看板<br/>联动 / 防抖 / Brush"]
+    F["LLM API 可选链路<br/>API Key 检测"]
+    G["显式降级策略<br/>fallback 数据<br/>前端提示横幅"]
+    H["run_app.py<br/>端口检测 / 子进程管理<br/>自动打开浏览器 / Ctrl+C 清理"]
+
+    H --> D
+    A --> B --> C --> D --> E
+    F --> D
+    D --> G --> E

@@ -1,0 +1,28 @@
+test14/
+├─ dashboard
+│  ├─ frontend
+│  │  └─ index.html
+│  ├─ requirements.txt
+│  └─ server.py
+├─ data
+│  ├─ batch_1000_features.csv
+│  ├─ fallback_reviews_sample.csv
+│  └─ online_shopping_10_cats.csv
+├─ images
+│  └─ week14_system_integration_flow.png
+├─ output
+│  ├─ dependency_versions_week14.txt
+│  ├─ project_tree_week14.txt
+│  ├─ recommended_commit_message.txt
+│  ├─ run_app_smoke.err.log
+│  ├─ run_app_smoke.log
+│  ├─ system_validation_week14.json
+│  └─ venv_rebuild_note_week14.txt
+├─ .env.example
+├─ .gitignore
+├─ flowchart_week14.mmd
+├─ README.md
+├─ requirements.txt
+├─ run_app.py
+├─ validate_system.py
+├─ 实验十四_M4系统联调与工程规范实验报告.md
