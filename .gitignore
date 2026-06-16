@@ -1,3 +1,27 @@
+# Python runtime
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+test_env/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated or large data artifacts
+*.parquet
+*.db
+*.db.tmp
+*.db.wal
+*.sqlite
+*.sqlite3
 output/_dedup_parts/
 output/m1_final_clean.parquet
-__pycache__/
+test_env/
